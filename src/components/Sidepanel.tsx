@@ -58,7 +58,8 @@ export function SidePanel() {
                       marginTop: "4px",
                     }}
                   >
-                    {location.latitude}, {location.longitude}
+                    lat:{location.latitude.toFixed(6)}, long:
+                    {location.longitude.toFixed(6)}
                   </Text>
                   <Text
                     type="secondary"
