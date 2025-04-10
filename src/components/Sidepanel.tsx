@@ -6,6 +6,7 @@ const { Text, Title } = Typography;
 
 export function SidePanel() {
   const { locations } = useMapContext();
+  console.log("locations", locations);
 
   return (
     <div style={{ height: "100%" }}>
@@ -50,6 +51,16 @@ export function SidePanel() {
                     }}
                   >
                     {location.description}
+                  </Text>
+                  <Text
+                    type="secondary"
+                    style={{
+                      display: "block",
+                      fontSize: "x-small",
+                      marginTop: "4px",
+                    }}
+                  >
+                    {location.latitude}, {location.longitude}
                   </Text>
                   <Text
                     type="secondary"
