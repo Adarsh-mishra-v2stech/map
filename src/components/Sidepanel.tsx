@@ -6,7 +6,6 @@ const { Text, Title } = Typography;
 
 export function SidePanel() {
   const { locations } = useMapContext();
-  console.log("locations", locations);
 
   return (
     <div style={{ height: "100%" }}>
@@ -39,7 +38,6 @@ export function SidePanel() {
                 }}
               >
                 <PushpinOutlined style={{ color: "red", fontSize: "20px" }} />
-
                 <div>
                   <Text strong>{location.title}</Text>
                   <Text

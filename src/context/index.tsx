@@ -3,7 +3,7 @@ import { Location, MapContextType } from "./types";
 
 const MapContext = createContext<MapContextType | null>(null);
 const MapProvider = ({ children }: { children: React.ReactNode }) => {
-  const [locations, setLocations] = useState<MapContextType["locations"]>([]);
+  const [locations, setLocations] = useState<Location[]>([]);
 
   const addLocation = (location: Location) => {
     const newLocation = {
