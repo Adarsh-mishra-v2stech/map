@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+🌍 Interactive Map Integration with React & Mapbox
+This project integrates an interactive map with user interactivity features using React, TypeScript, and Mapbox. Users can click on the map to add and view data related to geographic locations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
 
-Currently, two official plugins are available:
+1. Interactive Map Integration
+   Uses a free map service (Mapbox) for rendering the map.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Implemented via a React-friendly wrapper/component.
 
-## Expanding the ESLint configuration
+2. Map Click Event
+   Clicking on any point on the map opens a modal with a data entry form.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. Modal Form
+   Collects user inputs like:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Title
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Description
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Notes (or other custom fields)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Automatically includes latitude and longitude (can be shown or hidden).
+
+4. Data Submission
+   On form submission:
+
+Reverse geocoding is performed using a third-party API to get the address.
+
+The data (including address and coordinates) is stored.
+
+5. Side Panel
+   Displays a list of all user-submitted entries.
+
+Each entry includes:
+
+Location name/address
+
+Coordinates
+
+User-submitted details
+
+6. State Management
+   Uses a state management library such as:
+
+Context API / Redux / Zustand (choose one as implemented)
+
+🧩 Tech Stack
+React.js
+
+TypeScript
+
+Mapbox GL JS
+
+Reverse Geocoding API
+
+State Management: Context Api
